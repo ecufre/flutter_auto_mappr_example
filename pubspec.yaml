@@ -32,8 +32,10 @@ dependencies:
   sizer: ^3.0.5
   intl_utils: ^2.8.10
   go_router: ^16.0.0
+  auto_mappr_annotation: ^2.3.0
 
 dev_dependencies:
+  auto_mappr: ^2.9.0
   build_runner: ^2.5.4
   flutter_lints: ^5.0.0
   flutter_test:

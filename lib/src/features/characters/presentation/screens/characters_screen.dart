@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_auto_mappr_example/src/core/mixins/app_localizations_mixin.dart';
-import 'package:flutter_auto_mappr_example/src/features/characters/business/bloc/characters_bloc.dart';
-import 'package:flutter_auto_mappr_example/src/features/characters/business/providers/characters_providers.dart';
+import 'package:flutter_auto_mappr_example/src/features/characters/domain/bloc/characters_bloc.dart';
+import 'package:flutter_auto_mappr_example/src/features/characters/domain/providers/characters_providers.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class CharactersScreen extends ConsumerStatefulWidget {

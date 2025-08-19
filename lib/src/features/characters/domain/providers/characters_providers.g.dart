@@ -7,7 +7,7 @@ part of 'characters_providers.dart';
 // **************************************************************************
 
 String _$charactersRepositoryHash() =>
-    r'0b9fb6a1bdc557706c592a9abc69ea35334b1c10';
+    r'385661ac709311f19edee6499711cfbb10174d8d';
 
 /// See also [charactersRepository].
 @ProviderFor(charactersRepository)
@@ -25,7 +25,7 @@ final charactersRepositoryProvider =
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
 typedef CharactersRepositoryRef = AutoDisposeProviderRef<CharactersRepository>;
-String _$charactersBlocHash() => r'6b6419e166394bf9fd4f8cb816e66263638f88ad';
+String _$charactersBlocHash() => r'a24bddaf469253a8b2249d3e0597780aec0f2c0b';
 
 /// See also [charactersBloc].
 @ProviderFor(charactersBloc)

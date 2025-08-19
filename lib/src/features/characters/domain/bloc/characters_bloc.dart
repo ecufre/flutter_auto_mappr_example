@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter_auto_mappr_example/src/core/lib_core.dart';
-import 'package:flutter_auto_mappr_example/src/features/characters/domain/interceptor/characters_interceptor.dart';
+import 'package:flutter_auto_mappr_example/src/features/characters/data/dtos/character_dto.dart';
+import 'package:flutter_auto_mappr_example/src/features/characters/domain/mappers/characters_mapper.dart';
 import 'package:flutter_auto_mappr_example/src/features/characters/domain/models/character_model.dart';
 import 'package:flutter_auto_mappr_example/src/features/characters/domain/repositories/characters_repository.dart';
 import 'package:logging/logging.dart';
@@ -8,8 +9,10 @@ import 'package:logging/logging.dart';
 class CharactersBloc extends BaseBloc {
   CharactersBloc({required CharactersRepository repository})
     : _repository = repository {
+    _mapper = CharactersMapper();
     _fetchCharacters();
   }
+  late final CharactersMapper _mapper;
   final Logger _logger = Logger('CharactersBloc');
   final CharactersRepository _repository;
 
@@ -36,9 +39,7 @@ class CharactersBloc extends BaseBloc {
     try {
       _charactersReady = true;
       final response = await _repository.fetchCharacters();
-      _characters = CharactersInterceptor.listCharactersDtoToListModel(
-        response,
-      );
+      _characters = _mapper.convertList<CharacterDto, CharacterModel>(response);
       _emitCharactersReady();
     } catch (error, stackTrace) {
       _logger.severe(

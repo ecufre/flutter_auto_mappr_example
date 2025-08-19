@@ -6,7 +6,7 @@ part of 'app_providers.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$apiClientHash() => r'841ea68d4d99bd940c3146c5a46ed2175459b052';
+String _$apiClientHash() => r'bf2f794e97802120fc6e98d0b7436c65d3aab290';
 
 /// See also [apiClient].
 @ProviderFor(apiClient)
@@ -23,7 +23,7 @@ final apiClientProvider = Provider<ApiClient>.internal(
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
 typedef ApiClientRef = ProviderRef<ApiClient>;
-String _$navigationBlocHash() => r'284dc1c5dad5d97c55a8e35425229c9ed8dbc0e5';
+String _$navigationBlocHash() => r'464b85449ae0342bdf601096f14631529d2b704c';
 
 /// See also [navigationBloc].
 @ProviderFor(navigationBloc)
